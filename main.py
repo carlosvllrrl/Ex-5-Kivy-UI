@@ -11,13 +11,13 @@ from pidev.kivy.PauseScreen import PauseScreen
 from pidev.kivy import DPEAButton
 from pidev.kivy import ImageButton
 
+
 MIXPANEL_TOKEN = "x"
 MIXPANEL = MixPanel("Project Name", MIXPANEL_TOKEN)
 
 SCREEN_MANAGER = ScreenManager()
 MAIN_SCREEN_NAME = 'main'
 ADMIN_SCREEN_NAME = 'admin'
-x = 0
 
 
 class ProjectNameGUI(App):
@@ -70,8 +70,10 @@ class AdminScreen(Screen):
         """
         Builder.load_file('AdminScreen.kv')
 
-        PassCodeScreen.set_admin_events_screen(ADMIN_SCREEN_NAME)  # Specify screen name to transition to after correct password
-        PassCodeScreen.set_transition_back_screen(MAIN_SCREEN_NAME)  # set screen name to transition to if "Back to Game is pressed"
+        PassCodeScreen.set_admin_events_screen(
+            ADMIN_SCREEN_NAME)  # Specify screen name to transition to after correct password
+        PassCodeScreen.set_transition_back_screen(
+            MAIN_SCREEN_NAME)  # set screen name to transition to if "Back to Game is pressed"
 
         super(AdminScreen, self).__init__(**kwargs)
 
@@ -98,6 +100,8 @@ class AdminScreen(Screen):
         :return: None
         """
         quit()
+
+
 """
 Widget additions
 """
