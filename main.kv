@@ -5,7 +5,7 @@
 
     DPEAButton:
         id: test_button
-        text: "off" if btn.state == "normal" else "on" #todo finish making on/off button
+        text:"test"  #todo finish making on/off button
         size: 100, 100
         x: root.width * 0.75
         y: root.height * 0.5
@@ -13,12 +13,13 @@
         on_press: root.pressed()
 
     DPEAButton:
-        text: "test2"
+        id: on_button
+        text: "off" if on_button.state == "normal" else "on"
         size: 100, 100
         x: root.width * 0.25
         y:root.height * 0.5
         color: 1, 0, 0, 1
-        on_press: root.pressed()
+
 
     ImageButton:
         id: logo_image_button
