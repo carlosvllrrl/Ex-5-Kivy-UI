@@ -5,12 +5,13 @@
 
     DPEAButton:
         id: test_button# todo: add counter
-        text:"test"
+        text:"count"
         size: 100, 100
         x: root.width * 0.75
         y: root.height * 0.5
         color: 0, 1, 0, 1
-        on_press: root.pressed()
+        on_press: x+1
+
 
     DPEAButton:
         id: on_button
